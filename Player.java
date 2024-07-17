@@ -3,13 +3,14 @@ package somethingfishygame;
 
 /**
  *
- * @author memoonamalik
+ * @author memoonamalik, melanieogwang
  */
 import java.util.ArrayList;
+import java.util.List;
 
 public class Player {
-    private final String name;
-    private final ArrayList<Card> hand;
+    private String name;
+    private List<Card> hand;
 
     public Player(String name) {
         this.name = name;
@@ -20,15 +21,15 @@ public class Player {
         return name;
     }
 
-    public ArrayList<Card> getHand() {
-        return hand;
-    }
-
     public void addCardToHand(Card card) {
         hand.add(card);
     }
 
-    public Card removeCardFromHand(String rank) {
+    public List<Card> getHand() {
+        return hand;
+    }
+
+    public Card giveCard(String rank) {
         for (Card card : hand) {
             if (card.getRank().equals(rank)) {
                 hand.remove(card);
@@ -37,5 +38,13 @@ public class Player {
         }
         return null;
     }
-}
 
+    public boolean hasRank(String rank) {
+        for (Card card : hand) {
+            if (card.getRank().equals(rank)) {
+                return true;
+            }
+        }
+        return false;
+    }
+}
