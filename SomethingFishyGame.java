@@ -1,3 +1,5 @@
+package somethingfishygame;
+
 /*@author memoonamalik, melanieogwang */
 
 import java.util.ArrayList;
