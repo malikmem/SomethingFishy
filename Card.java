@@ -3,7 +3,7 @@ package somethingfishygame;
 
 /**
  *
- * @author memoonamalik
+ * @author memoonamalik, melanieogwang
  */
 public class Card {
     private final String suit;
@@ -26,4 +26,5 @@ public class Card {
     public String toString() {
         return rank + " of " + suit;
     }
+}
 }
